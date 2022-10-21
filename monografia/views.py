@@ -17,6 +17,21 @@ def home(request):
     data['monografias'] = Monografias.objects.all()
     return render(request,"index.html", data)
 
+
+def buscarMonografias(request):
+    data = {}
+    orientador = request.GET.get('orientador')
+    if orientador:
+        data['monografias'] = Monografias.objects.filter(orientador__icontains=orientador)
+        data['titulo'] = orientador
+        return render(request,"buscarMonografia.html", data)
+    else:
+     data['monografias'] = Monografias.objects.all()
+     return render(request,"buscarMonografia.html", data)
+
+
+
+
     
 def formAutores(request):
     data = {}
@@ -63,3 +78,4 @@ def createmonografia(request):
     form = MonografiasForm(request.POST or None)
     form.save()
     return redirect('home')
+    

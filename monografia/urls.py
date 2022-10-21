@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from monografia.views import home, formMonografias, formDiscentes, formCoAutores, formAutores, createmonografia, createcoautores, creatediscentes, createautores
+from monografia.views import home, formMonografias, formDiscentes, formCoAutores, buscarMonografias, formAutores, createmonografia, createcoautores, creatediscentes, createautores
 
 
 urlpatterns = [
@@ -14,4 +14,6 @@ urlpatterns = [
     path('createcoautores/', createcoautores),
     path('creatediscentes/', creatediscentes),
     path('createautores/', createautores),
+    path('buscarMonografia/',buscarMonografias ),
+
 ]

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Autores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+   <div class="col8 m-auto pt-2 pb-2  text-center">
+     <h1>Cadastrar Autores</h1>
+   </div>
+
+   <div class="col8 m-auto pt-2 pb-4 text-center">
+    <a href="/" class="btn btn-info">Voltar</a>
+  </div>
+
+  <div class="col-8 m-auto pt-2 pb-2 text-center">
+
+  <form name="form" id="form" action="/createautores/"method="POST" >
+    {% csrf_token %}
+    <div class="form-group mt-4">
+     <span>Nome:</span> {{form.nome}}
+    </div>
+
+    <div class="form-group mt-4">
+      <span>Curso:</span> {{form.curso}}
+    </div>
+
+    <div class="form-group mt-4">
+       <span>Universidade:</span>{{form.universidade}}
+    </div>
+
+    <div class="form-group mt-4">
+       <span>Email:</span> {{form.email}}
+    </div>
+
+    <div class="form-group mt-4">
+      <span>lattes:</span> {{form.lattes}}
+   </div>
+    <div class="form-group mt-4">
+    <span>g_scholar:</span> {{form.g_scholar}}
+  </div>
+
+   <div class="form-group mt-4">
+     <span>r_gate:</span> {{form.r_gate}}
+  </div>
+
+   <div class="form-group mt-4">
+     <span>linkedin:</span> {{form.linkedin}}
+  </div>
+
+  <div class="form-group mt-4">
+    <span>orcid:</span> {{form.orcid}}
+ </div>
+ 
+  <div class="form-group mt-4">
+    <span>github:</span> {{form.github}}
+ </div>
+ 
+   <input type="submit" class="btn btn-success mt-4" value="Cadastrar">
+</form>
+
+</div>
+
+
+ 
+      
+
+</div>
+
+
+
+</body>
+</html>

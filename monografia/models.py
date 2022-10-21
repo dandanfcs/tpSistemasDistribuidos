@@ -1,0 +1,52 @@
+from django.db import models
+
+class Autores(models.Model):
+    nome = models.CharField(max_length=200)
+    curso = models.CharField(max_length=200)
+    universidade = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    lattes = models.CharField(max_length=300)
+    g_scholar = models.CharField(max_length=300)
+    r_gate = models.CharField(max_length=300)
+    linkedin = models.CharField(max_length=300)
+    orcid = models.CharField(max_length=300)
+    github = models.CharField(max_length=300)
+
+class CoAutores(models.Model):
+    nome = models.CharField(max_length=200)
+    curso = models.CharField(max_length=200)
+    universidade = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    lattes = models.CharField(max_length=300)
+    g_scholar = models.CharField(max_length=300)
+    r_gate = models.CharField(max_length=300)
+    linkedin = models.CharField(max_length=300)
+    orcid = models.CharField(max_length=300)
+    github = models.CharField(max_length=300)
+    facebook = models.CharField(max_length=300)
+
+class Discentes(models.Model):
+    nome = models.CharField(max_length=200)
+    curso = models.CharField(max_length=200)
+    universidade = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    lattes = models.CharField(max_length=300)
+    g_scholar = models.CharField(max_length=300)
+    r_gate = models.CharField(max_length=300)
+    linkedin = models.CharField(max_length=300)
+    orcid = models.CharField(max_length=300)
+    github = models.CharField(max_length=300)
+    teste = models.CharField(max_length=200)
+
+class Monografias(models.Model):
+    nome = models.CharField(max_length=200)
+    titulo = models.CharField(max_length=200)
+    autor = models.CharField(max_length=200)
+    orientador = models.CharField(max_length=200)
+    coorientador = models.CharField(max_length=300)
+    data = models.CharField(max_length=300)
+    resumo = models.CharField(max_length=300)
+    palavrachave = models.CharField(max_length=300)
+    universidade = models.CharField(max_length=300)
+    curso = models.CharField(max_length=300)
+    linkpdf = models.CharField(max_length=300)
